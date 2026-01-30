@@ -243,13 +243,13 @@ export default function Home() {
             <div className="mt-5 flex flex-wrap gap-3">
               <a
                 className="rounded-xl bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-950 hover:bg-white"
-                href="mailto:you@example.com"
+                href="mailto:suleimanj515@gmail.com"
               >
-                you@example.com
+                suleimanj515@gmail.com
               </a>
               <a
                 className="rounded-xl border border-zinc-800 px-4 py-2 text-sm font-medium text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900"
-                href="https://github.com/"
+                href=" https://github.com/caged-brush "
                 target="_blank"
                 rel="noreferrer"
               >
@@ -257,7 +257,7 @@ export default function Home() {
               </a>
               <a
                 className="rounded-xl border border-zinc-800 px-4 py-2 text-sm font-medium text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900"
-                href="https://www.linkedin.com/"
+                href=" https://www.linkedin.com/in/suleimanJibril "
                 target="_blank"
                 rel="noreferrer"
               >
