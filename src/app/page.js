@@ -18,21 +18,14 @@ const projects = [
     subtitle: "Fighters ↔ Scouts discovery platform",
     impact: "Role-based onboarding • Realtime chat • Media uploads",
     stack: ["React Native", "Node/Express", "Postgres", "Supabase"],
-    href: "#",
+    href: "/projects/fighthub",
   },
   {
     title: "Sugar & Spice",
     subtitle: "Business website rebuild",
     impact: "Next.js App Router • Motion UI • Deployed on Vercel",
     stack: ["Next.js", "Tailwind", "Framer Motion"],
-    href: "#",
-  },
-  {
-    title: "Upload Pipeline",
-    subtitle: "Large file upload system",
-    impact: "Signed URLs • Validation • Retry strategy",
-    stack: ["AWS S3", "Lambda", "Node"],
-    href: "#",
+    href: "/projects/sugarspice",
   },
 ];
 
@@ -163,7 +156,7 @@ export default function Home() {
               <div className="mt-6">
                 <Link
                   className="inline-flex items-center gap-2 text-sm font-medium text-zinc-100 hover:text-white"
-                  href="#"
+                  href="/projects/fighthub"
                 >
                   Read the case study <span aria-hidden>→</span>
                 </Link>
@@ -188,19 +181,48 @@ export default function Home() {
             >
               Featured projects
             </motion.h2>
+
             <motion.p
               className="mt-2 max-w-2xl text-sm text-zinc-400"
               variants={fadeUp}
               custom={1}
             >
-              Depth beats quantity. Each project should have a short case study:
-              decisions, tradeoffs, and what you’d improve next.
+              Two deep case studies beat five shallow ones. These are the
+              projects I’m actively building and shipping.
             </motion.p>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {projects.map((p, i) => (
-                <ProjectCard key={p.title} p={p} i={i} />
-              ))}
+            {/* 2-card layout + a subtle "more coming" filler that doesn't look broken */}
+            <div className="mt-8 grid gap-4 md:grid-cols-12">
+              <div className="md:col-span-6">
+                <ProjectCard p={projects[0]} i={0} />
+              </div>
+              <div className="md:col-span-6">
+                <ProjectCard p={projects[1]} i={1} />
+              </div>
+
+              {/* Nice balanced third card that isn't pretending to be a project */}
+              <motion.div
+                className="md:col-span-12"
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.12 }}
+              >
+                <div className="rounded-3xl border border-zinc-800 bg-zinc-900/20 p-6">
+                  <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+                    In progress
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold">
+                    More shipping soon
+                  </h3>
+                  <p className="mt-2 max-w-3xl text-sm leading-relaxed text-zinc-400">
+                    I’m building additional systems inside FightHub (posters →
+                    applications → ranking, verification, better uploads). I
+                    only add a project here once it has real screenshots,
+                    metrics, and a defensible case study.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </section>
@@ -249,7 +271,7 @@ export default function Home() {
               </a>
               <a
                 className="rounded-xl border border-zinc-800 px-4 py-2 text-sm font-medium text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900"
-                href=" https://github.com/caged-brush "
+                href="https://github.com/caged-brush"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -257,7 +279,7 @@ export default function Home() {
               </a>
               <a
                 className="rounded-xl border border-zinc-800 px-4 py-2 text-sm font-medium text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900"
-                href=" https://www.linkedin.com/in/suleimanJibril "
+                href="https://www.linkedin.com/in/suleimanjibril"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -342,12 +364,12 @@ function ProjectCard({ p, i }) {
       </div>
 
       <div className="mt-5">
-        <a
+        <Link
           className="text-sm font-medium text-zinc-100 hover:text-white"
           href={p.href}
         >
           Open <span aria-hidden>→</span>
-        </a>
+        </Link>
       </div>
     </motion.div>
   );
