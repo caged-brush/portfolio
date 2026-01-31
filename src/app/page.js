@@ -54,7 +54,7 @@ export default function Home() {
               variants={fadeUp}
               custom={0}
             >
-              Full-stack / Mobile Developer • Vancouver, Canada
+              Full-stack / Mobile Developer • Kamloops, Canada
             </motion.p>
 
             <motion.h1
