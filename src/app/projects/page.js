@@ -3,7 +3,7 @@ import { projects } from "@/data/portfolio";
 
 export const metadata = {
   title: "Work",
-  description: "Case studies in full-stack product development, BLE asset tracking, and client web development.",
+  description: "Case studies in full-stack development, native Android, BLE asset tracking, and freelance websites.",
 };
 
 export default function ProjectsPage() {
@@ -11,7 +11,7 @@ export default function ProjectsPage() {
     <>
       <section className="page-intro">
         <h1>Selected work<span>.</span></h1>
-        <p className="lede">A product I founded, a hardware capstone, and a client website rebuild. See what I built and how each project works.</p>
+        <p className="lede">Explore the product I founded, my Android class project and hardware capstone, and the websites I built for clients.</p>
       </section>
       <section className="work-list" aria-labelledby="projects-title">
         <h2 className="sr-only" id="projects-title">Projects</h2>

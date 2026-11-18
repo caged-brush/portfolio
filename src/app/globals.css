@@ -98,6 +98,14 @@ button { font: inherit; color: inherit; }
 .sugar-window span { display: block; font: .6rem/1.15 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
 .sugar-window strong { display: block; margin: .1em 0; font: clamp(1.45rem, 3.8vw, 3.1rem)/.85 var(--serif); letter-spacing: -.055em; }
 .sugar-window i { font-weight: 400; }
+.art-yahdina { display: grid; place-items: center; isolation: isolate; color: #fffaf0; background: #282d34; }
+.art-yahdina img { z-index: -2; object-position: center; }
+.art-yahdina::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, #151e29b8, #151e296e); }
+.art-yahdina span, .art-discuss span { font: clamp(1.5rem, 4vw, 3.4rem)/1.05 var(--serif); letter-spacing: -.04em; text-align: center; }
+.art-yahdina span { margin: 15px; }
+.art-discuss { display: grid; place-items: center; background: radial-gradient(ellipse at 35% -40%, #aeccf3, transparent 80%), #2c4875; color: #f8fbff; }
+.art-discuss > div { display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); }
+.art-discuss img { width: clamp(46px, 8vw, 75px); height: auto; }
 .project-card-body { padding: 20px 22px 12px; }
 .project-card-body .eyebrow { color: var(--accent); }
 .project-card-body h3 { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 8px 0 6px; font: clamp(1.5rem, 2.8vw, 2.25rem)/1.05 var(--serif); letter-spacing: -.04em; }

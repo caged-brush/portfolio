@@ -22,6 +22,26 @@ export function ProjectArt({ project, priority = false }) {
     );
   }
 
+  if (project.image === "yahdina") {
+    return (
+      <div className="project-art art-yahdina" aria-hidden="true">
+        <Image src="/images/yahdina-lagos.webp" alt="" fill unoptimized sizes="(max-width: 700px) 100vw, 590px" />
+        <span>Yahdina Chambers</span>
+      </div>
+    );
+  }
+
+  if (project.image === "discuss") {
+    return (
+      <div className="project-art art-discuss" aria-hidden="true">
+        <div>
+          <Image src="/images/discuss-icon.webp" alt="" width={75} height={75} unoptimized />
+          <span>Discuss</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="project-art art-sugar" aria-hidden="true">
       <div className="sugar-window"><span>Beauty bar</span><strong>Sugar <i>&amp;</i><br /> Spice</strong><span>Services &nbsp; · &nbsp; Gallery</span></div>
